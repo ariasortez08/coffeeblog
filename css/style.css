@@ -1,6 +1,6 @@
 :root {
-  --fuenteHeading: 'PT Sans', sans-serif;
-  --fuenteParrafos: 'Open Sans', sans-serif;
+  --fuenteHeading: "PT Sans", sans-serif;
+  --fuenteParrafos: "Open Sans", sans-serif;
   --blanco: #fff;
   --negro: #000;
   --primario: #645a54;
@@ -29,8 +29,7 @@ body {
 /* GLOBALES */
 
 .contenedor {
-  max-width: 120rem;
-  width: 90%;
+  width: min(90%, 120rem);
   margin: 0 auto;
 }
 
@@ -99,6 +98,10 @@ img {
 }
 
 /* NAVEHACION BARRa */
+
+.barra {
+  padding-top: 3rem;
+}
 
 @media (min-width: 768px) {
   .barra {
@@ -210,4 +213,20 @@ img {
 .widget-curso__label,
 .widget-curso__info {
   font-size: 2rem;
+}
+
+.footer {
+  background-color: var(--negro);
+  padding-bottom: 3rem;
+}
+
+/* NOSTROS */
+
+@media (min-width: 768px) {
+  .sobre-nosotros {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 2rem;
+    place-items: center;
+  }
 }
