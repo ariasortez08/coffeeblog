@@ -1,6 +1,6 @@
 :root {
-  --fuenteHeading: "PT Sans", sans-serif;
-  --fuenteParrafos: "Open Sans", sans-serif;
+  --fuenteHeading: 'PT Sans', sans-serif;
+  --fuenteParrafos: 'Open Sans', sans-serif;
   --blanco: #fff;
   --negro: #000;
   --primario: #645a54;
@@ -78,8 +78,15 @@ img {
 
 /* HEADER */
 
-.header {
+.webp .header {
+  background-image: url(../img/banner.webp);
+}
+
+.no-webp .header {
   background-image: url(../img/banner.jpg);
+}
+
+.header {
   height: 60rem;
   background-size: cover;
   background-repeat: no-repeat;
@@ -171,6 +178,11 @@ img {
   text-align: center;
   color: var(--blanco);
   text-transform: uppercase;
+  border: none;
+}
+
+.boton:hover {
+  cursor: pointer;
 }
 
 @media (min-width: 768px) {
@@ -260,4 +272,39 @@ img {
 .curso__info {
   font-family: var(--fuenteHeading);
   font-weight: bold;
+}
+
+/* PAGINA CONTACTO */
+
+.contacto-bg {
+  background-image: url(../img/contacto.jpg);
+  height: 40rem;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.formulario {
+  background-color: var(--blanco);
+  margin: -5rem auto 0 auto;
+  width: 95%;
+  padding: 5rem;
+}
+
+.campo {
+  display: flex;
+  gap: 2rem;
+  margin-bottom: 2rem;
+}
+
+.campo__label {
+  flex: 0 0 9rem;
+  text-align: right;
+}
+.campo__field {
+  flex: 1;
+  border: 1px solid var(--gris);
+}
+
+.campo__field--textarea {
+  height: 20rem;
 }
